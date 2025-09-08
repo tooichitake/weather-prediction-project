@@ -1,0 +1,229 @@
+Dataset shape: (31046, 21)
+Date range: from 1940-01-02 to 2024-12-31
+
+Column names:
+['time', 'weather_code', 'temperature_2m_max', 'temperature_2m_min', 'temperature_2m_mean', 'apparent_temperature_max', 'apparent_temperature_min', 'apparent_temperature_mean', 'sunrise', 'sunset', 'precipitation_sum', 'rain_sum', 'snowfall_sum', 'precipitation_hours', 'sunshine_duration', 'daylight_duration', 'wind_speed_10m_max', 'wind_gusts_10m_max', 'wind_direction_10m_dominant', 'shortwave_radiation_sum', 'et0_fao_evapotranspiration']
+
+First 5 rows:
+
+
+time	weather_code	temperature_2m_max	temperature_2m_min	temperature_2m_mean	apparent_temperature_max	apparent_temperature_min	apparent_temperature_mean	sunrise	sunset	...	rain_sum	snowfall_sum	precipitation_hours	sunshine_duration	daylight_duration	wind_speed_10m_max	wind_gusts_10m_max	wind_direction_10m_dominant	shortwave_radiation_sum	et0_fao_evapotranspiration
+0	1940-01-02	51	22.2	17.4	19.6	21.9	16.2	19.2	1940-01-02T04:48	1940-01-02T19:09	...	2.1	0.0	11.0	45748.11	51663.50	17.7	43.9	153	20.18	4.02
+1	1940-01-03	51	25.1	16.4	20.8	25.8	17.5	21.5	1940-01-03T04:49	1940-01-03T19:09	...	1.1	0.0	6.0	48408.09	51627.63	19.7	42.1	61	24.04	4.69
+2	1940-01-04	3	28.5	16.6	22.6	29.7	17.8	23.4	1940-01-04T04:49	1940-01-04T19:09	...	0.0	0.0	0.0	48245.77	51589.00	18.4	38.9	44	27.77	5.87
+3	1940-01-05	55	22.1	19.3	21.0	23.1	20.3	21.9	1940-01-05T04:50	1940-01-05T19:09	...	9.7	0.0	13.0	9645.05	51547.63	17.3	42.8	12	9.98	2.31
+4	1940-01-06	53	29.2	19.3	23.5	32.1	19.6	24.7	1940-01-06T04:51	1940-01-06T19:09	...	3.5	0.0	12.0	36146.81	51503.58	16.6	35.6	86	18.12	4.38
+
+Target variable 'precipitation_3day' created successfully
+Total rows: 31046
+Rows with valid target: 31043
+Rows with NaN target (last 3 days): 3
+
+After removing last 3 days:
+Dataset size: 31043
+Time range: 1940-01-02 to 2024-12-28
+
+Target variable statistics:
+Mean: 5.92 mm
+Median: 1.30 mm
+Std: 13.50 mm
+Min: 0.00 mm
+Max: 296.50 mm
+
+Cleaned data with target variable saved to: ../../data/interim/sydney_weather_with_precipitation_3day_target.csv
+Top 10 features by absolute correlation:
+precipitation_hours: 0.2710
+precipitation_sum: 0.2579
+rain_sum: 0.2579
+sunshine_duration: 0.1882
+apparent_temperature_min: 0.1535
+temperature_2m_min: 0.1475
+apparent_temperature_mean: 0.1244
+wind_direction_10m_dominant: 0.1228
+temperature_2m_mean: 0.1049
+shortwave_radiation_sum: 0.0991
+
+Selected 16 features:
+['weather_code', 'temperature_2m_max', 'temperature_2m_min', 'temperature_2m_mean', 'apparent_temperature_max', 'apparent_temperature_min', 'apparent_temperature_mean', 'precipitation_sum', 'precipitation_hours', 'sunshine_duration', 'daylight_duration', 'wind_speed_10m_max', 'wind_gusts_10m_max', 'wind_direction_10m_dominant', 'shortwave_radiation_sum', 'et0_fao_evapotranspiration']
+
+Missing values per column:
+Series([], dtype: int64)
+
+Original dataset size: 31043
+Clean dataset size: 31043
+Rows removed: 0
+
+Month distribution in the dataset:
+month
+April        2550
+August       2635
+December     2632
+February     2402
+January      2634
+July         2635
+June         2550
+March        2635
+May          2635
+November     2550
+October      2635
+September    2550
+Name: count, dtype: int64
+
+Total features: 17
+
+Updated features list (first 10): ['weather_code', 'temperature_2m_max', 'temperature_2m_min', 'temperature_2m_mean', 'apparent_temperature_max', 'apparent_temperature_min', 'apparent_temperature_mean', 'rain_sum', 'precipitation_hours', 'sunshine_duration']
+
+Training set size: 18625 (60.0%)
+Validation set size: 6209 (20.0%)
+Test set size: 6209 (20.0%)
+
+Target statistics:
+Train - Mean: 5.94 mm, Std: 13.86 mm
+Val - Mean: 5.63 mm, Std: 12.14 mm
+Test - Mean: 6.18 mm, Std: 13.66 mm
+
+Columns in X_train: ['weather_code', 'temperature_2m_max', 'temperature_2m_min', 'temperature_2m_mean', 'apparent_temperature_max', 'apparent_temperature_min', 'apparent_temperature_mean', 'rain_sum', 'precipitation_hours', 'sunshine_duration', 'daylight_duration', 'wind_speed_10m_max', 'wind_gusts_10m_max', 'wind_direction_10m_dominant', 'shortwave_radiation_sum', 'et0_fao_evapotranspiration', 'month']
+Number of columns: 17
+
+
+Categorical features: ['month', 'weather_code']
+Numerical features (15): ['temperature_2m_max', 'temperature_2m_min', 'temperature_2m_mean', 'apparent_temperature_max', 'apparent_temperature_min']...
+
+Final shape - X_train: (18625, 17), X_val: (6209, 17), X_test: (6209, 17)
+Total features: 17
+
+Note: LightGBM handles categorical features natively - no one-hot encoding needed!
+
+Optimizing LightGBM hyperparameters for RMSE...
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[22]	valid_0's rmse: 11.4632
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[83]	valid_0's rmse: 11.4322
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[12]	valid_0's rmse: 11.5326
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[140]	valid_0's rmse: 11.4318
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[16]	valid_0's rmse: 11.4735
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[7]	valid_0's rmse: 11.5346
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[4]	valid_0's rmse: 11.6135
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[14]	valid_0's rmse: 11.5354
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[115]	valid_0's rmse: 11.4608
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[28]	valid_0's rmse: 11.4339
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[139]	valid_0's rmse: 11.4155
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[189]	valid_0's rmse: 11.4089
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[78]	valid_0's rmse: 11.4299
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[210]	valid_0's rmse: 11.4049
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[49]	valid_0's rmse: 11.4468
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[202]	valid_0's rmse: 11.4036
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[55]	valid_0's rmse: 11.4367
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[108]	valid_0's rmse: 11.3928
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[108]	valid_0's rmse: 11.3933
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[89]	valid_0's rmse: 11.4043
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[53]	valid_0's rmse: 11.4054
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[107]	valid_0's rmse: 11.426
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[124]	valid_0's rmse: 11.4265
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[108]	valid_0's rmse: 11.4073
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[59]	valid_0's rmse: 11.4346
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[172]	valid_0's rmse: 11.4058
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[49]	valid_0's rmse: 11.4412
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[108]	valid_0's rmse: 11.4275
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[73]	valid_0's rmse: 11.4324
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[210]	valid_0's rmse: 11.4109
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[24]	valid_0's rmse: 11.4472
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[98]	valid_0's rmse: 11.3926
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[75]	valid_0's rmse: 11.405
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[73]	valid_0's rmse: 11.3998
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[91]	valid_0's rmse: 11.4003
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[109]	valid_0's rmse: 11.3946
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[138]	valid_0's rmse: 11.3796
+Training until validation scores don't improve for 50 rounds
+
+Model saved to: ../../models/precipitation_fall/precipitation_lightgbm.txt
+Model info saved to: ../../models/precipitation_fall/precipitation_lightgbm_info.json
+
+============================================================
+REGRESSION MODEL EVALUATION - TEST SET
+============================================================
+Root Mean Squared Error (RMSE): 12.8659
+Mean Absolute Error (MAE):      6.5733
+R-squared (R²):                 0.1133
+Mean Squared Error (MSE):       165.5321
+============================================================
+
+Additional Statistics:
+Mean of predictions:     6.0196
+Std of predictions:      4.7608
+Mean of actual values:   6.1757
+Std of actual values:    13.6631
+Mean residual:          0.1561
+Std of residuals:       12.8650

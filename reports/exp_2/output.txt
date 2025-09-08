@@ -1,0 +1,340 @@
+Step 1: Optimizing LightGBM hyperparameters for AUC...
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[48]	valid_0's auc: 0.60513
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[20]	valid_0's auc: 0.61316
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[96]	valid_0's auc: 0.608522
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[20]	valid_0's auc: 0.606294
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[29]	valid_0's auc: 0.609618
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[57]	valid_0's auc: 0.602845
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[18]	valid_0's auc: 0.605656
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[7]	valid_0's auc: 0.59532
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[36]	valid_0's auc: 0.610609
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[33]	valid_0's auc: 0.611073
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[21]	valid_0's auc: 0.61794
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[22]	valid_0's auc: 0.613542
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[17]	valid_0's auc: 0.616686
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[4]	valid_0's auc: 0.605457
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[7]	valid_0's auc: 0.618383
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[22]	valid_0's auc: 0.604947
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[39]	valid_0's auc: 0.607066
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[6]	valid_0's auc: 0.596714
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[8]	valid_0's auc: 0.608193
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[3]	valid_0's auc: 0.617592
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[5]	valid_0's auc: 0.598814
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[17]	valid_0's auc: 0.61595
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[2]	valid_0's auc: 0.609465
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[4]	valid_0's auc: 0.602228
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[40]	valid_0's auc: 0.616642
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[7]	valid_0's auc: 0.612383
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[4]	valid_0's auc: 0.599203
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[6]	valid_0's auc: 0.616566
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[5]	valid_0's auc: 0.607401
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[10]	valid_0's auc: 0.615037
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[8]	valid_0's auc: 0.616639
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[6]	valid_0's auc: 0.61212
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[26]	valid_0's auc: 0.609878
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[4]	valid_0's auc: 0.607931
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[25]	valid_0's auc: 0.617492
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[92]	valid_0's auc: 0.617483
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[12]	valid_0's auc: 0.604906
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[95]	valid_0's auc: 0.617126
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[30]	valid_0's auc: 0.612788
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[9]	valid_0's auc: 0.599475
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[18]	valid_0's auc: 0.608795
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[25]	valid_0's auc: 0.61366
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[45]	valid_0's auc: 0.618927
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[95]	valid_0's auc: 0.617721
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[69]	valid_0's auc: 0.616878
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[39]	valid_0's auc: 0.613314
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[17]	valid_0's auc: 0.618141
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[19]	valid_0's auc: 0.616564
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[19]	valid_0's auc: 0.618416
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[40]	valid_0's auc: 0.606156
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[26]	valid_0's auc: 0.608332
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[87]	valid_0's auc: 0.619245
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[10]	valid_0's auc: 0.617091
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[23]	valid_0's auc: 0.615585
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[23]	valid_0's auc: 0.617218
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[19]	valid_0's auc: 0.615869
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[43]	valid_0's auc: 0.610961
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[172]	valid_0's auc: 0.619661
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[17]	valid_0's auc: 0.612601
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[110]	valid_0's auc: 0.618025
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[26]	valid_0's auc: 0.61631
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[134]	valid_0's auc: 0.617539
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[19]	valid_0's auc: 0.614725
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[19]	valid_0's auc: 0.618847
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[11]	valid_0's auc: 0.617009
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[31]	valid_0's auc: 0.614495
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[104]	valid_0's auc: 0.619384
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[33]	valid_0's auc: 0.610242
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[82]	valid_0's auc: 0.618242
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[49]	valid_0's auc: 0.614995
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[84]	valid_0's auc: 0.61701
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[115]	valid_0's auc: 0.618548
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[28]	valid_0's auc: 0.618064
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[82]	valid_0's auc: 0.618197
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[23]	valid_0's auc: 0.615829
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[16]	valid_0's auc: 0.616868
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[187]	valid_0's auc: 0.619501
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[43]	valid_0's auc: 0.617564
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[19]	valid_0's auc: 0.619033
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[19]	valid_0's auc: 0.619038
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[46]	valid_0's auc: 0.617655
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[105]	valid_0's auc: 0.619698
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[113]	valid_0's auc: 0.619932
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[161]	valid_0's auc: 0.619598
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[120]	valid_0's auc: 0.619317
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[160]	valid_0's auc: 0.620234
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[344]	valid_0's auc: 0.620483
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[308]	valid_0's auc: 0.621084
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[105]	valid_0's auc: 0.619894
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[115]	valid_0's auc: 0.61973
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[71]	valid_0's auc: 0.618448
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[213]	valid_0's auc: 0.619793
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[105]	valid_0's auc: 0.620156
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[213]	valid_0's auc: 0.621049
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[232]	valid_0's auc: 0.621116
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[23]	valid_0's auc: 0.617288
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[19]	valid_0's auc: 0.618195
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[112]	valid_0's auc: 0.619922
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[19]	valid_0's auc: 0.617609
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[115]	valid_0's auc: 0.6203
+Training until validation scores don't improve for 50 rounds
+Early stopping, best iteration is:
+[232]	valid_0's auc: 0.621116
+
+Best parameters:
+  num_leaves: 20
+  learning_rate: 0.012362525887425679
+  feature_fraction: 0.4652124659856076
+  bagging_fraction: 0.8258963102764058
+
+Best validation AUC: 0.6211
+Best iteration: 232
+
+Step 2: Optimizing threshold for f1...
+Best threshold: 0.383
+Best validation f1: 0.6628
+
+Validation Set Performance:
+Accuracy: 0.5398
+Precision: 0.5178
+Recall: 0.9207
+F1: 0.6628
+Auc: 0.6211
+
+
+============================================================
+CLASSIFICATION REPORT - TEST SET
+============================================================
+              precision    recall  f1-score   support
+
+     No Rain     0.6897    0.1393    0.2318      3158
+        Rain     0.5120    0.9351    0.6617      3050
+
+    accuracy                         0.5303      6208
+   macro avg     0.6008    0.5372    0.4468      6208
+weighted avg     0.6024    0.5303    0.4430      6208
+
+AUC-ROC: 0.6139
+Using threshold: 0.367

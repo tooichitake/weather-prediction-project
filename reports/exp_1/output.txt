@@ -1,0 +1,134 @@
+Dataset shape: (31046, 21)
+Date range: from 1940-01-02 to 2024-12-31
+
+Column names:
+['time', 'weather_code', 'temperature_2m_max', 'temperature_2m_min', 'temperature_2m_mean', 'apparent_temperature_max', 'apparent_temperature_min', 'apparent_temperature_mean', 'sunrise', 'sunset', 'precipitation_sum', 'rain_sum', 'snowfall_sum', 'precipitation_hours', 'sunshine_duration', 'daylight_duration', 'wind_speed_10m_max', 'wind_gusts_10m_max', 'wind_direction_10m_dominant', 'shortwave_radiation_sum', 'et0_fao_evapotranspiration']
+
+First 5 rows:
+	time	weather_code	temperature_2m_max	temperature_2m_min	temperature_2m_mean	apparent_temperature_max	apparent_temperature_min	apparent_temperature_mean	sunrise	sunset	...	rain_sum	snowfall_sum	precipitation_hours	sunshine_duration	daylight_duration	wind_speed_10m_max	wind_gusts_10m_max	wind_direction_10m_dominant	shortwave_radiation_sum	et0_fao_evapotranspiration
+0	1940-01-02	51	22.2	17.4	19.6	21.9	16.2	19.2	1940-01-02T04:48	1940-01-02T19:09	...	2.1	0.0	11.0	45748.11	51663.50	17.7	43.9	153	20.18	4.02
+1	1940-01-03	51	25.1	16.4	20.8	25.8	17.5	21.5	1940-01-03T04:49	1940-01-03T19:09	...	1.1	0.0	6.0	48408.09	51627.63	19.7	42.1	61	24.04	4.69
+2	1940-01-04	3	28.5	16.6	22.6	29.7	17.8	23.4	1940-01-04T04:49	1940-01-04T19:09	...	0.0	0.0	0.0	48245.77	51589.00	18.4	38.9	44	27.77	5.87
+3	1940-01-05	55	22.1	19.3	21.0	23.1	20.3	21.9	1940-01-05T04:50	1940-01-05T19:09	...	9.7	0.0	13.0	9645.05	51547.63	17.3	42.8	12	9.98	2.31
+4	1940-01-06	53	29.2	19.3	23.5	32.1	19.6	24.7	1940-01-06T04:51	1940-01-06T19:09	...	3.5	0.0	12.0	36146.81	51503.58	16.6	35.6	86	18.12	4.38
+5 rows × 21 columns
+
+Target variable 'rain_on_day_7' created successfully
+Total rows: 31046
+Rows with valid target: 31039
+Rows with NaN target (last 7 days): 7
+
+After removing last 7 days:
+Dataset size: 31039
+Time range: 1940-01-02 to 2024-12-24
+
+Cleaned data with target variable saved to: ../../data/interim/sydney_weather_with_rain_on_day_7_target.csv
+Number of rainy days: 15253
+Number of bins created: 10
+
+Number of temperature bins created: 10
+
+Top 10 features by Mutual Information:
+daylight_duration: 0.0204
+temperature_2m_mean: 0.0195
+apparent_temperature_mean: 0.0146
+temperature_2m_min: 0.0139
+temperature_2m_max: 0.0132
+sunshine_duration: 0.0110
+apparent_temperature_min: 0.0107
+wind_direction_10m_dominant: 0.0084
+apparent_temperature_max: 0.0082
+shortwave_radiation_sum: 0.0056
+
+Selected 17 features:
+['time', 'weather_code', 'temperature_2m_max', 'temperature_2m_min', 'temperature_2m_mean', 'apparent_temperature_max', 'apparent_temperature_min', 'apparent_temperature_mean', 'rain_sum', 'precipitation_hours', 'sunshine_duration', 'daylight_duration', 'wind_speed_10m_max', 'wind_gusts_10m_max', 'wind_direction_10m_dominant', 'shortwave_radiation_sum', 'et0_fao_evapotranspiration']
+
+Missing values per column:
+Series([], dtype: int64)
+
+Original dataset size: 31039
+Clean dataset size: 31039
+Rows removed: 0
+
+Month distribution in the dataset:
+month
+April        2550
+August       2635
+December     2628
+February     2402
+January      2634
+July         2635
+June         2550
+March        2635
+May          2635
+November     2550
+October      2635
+September    2550
+Name: count, dtype: int64
+
+Total features: 17
+
+Updated features list (first 10): ['month', 'weather_code', 'temperature_2m_max', 'temperature_2m_min', 'temperature_2m_mean', 'apparent_temperature_max', 'apparent_temperature_min', 'apparent_temperature_mean', 'rain_sum', 'precipitation_hours']
+
+
+Training set size: 18623 (60.0%)
+Validation set size: 6208 (20.0%)
+Test set size: 6208 (20.0%)
+
+Target distribution:
+Train: 49.13% rain days
+Val: 49.13% rain days
+Test: 49.13% rain days
+
+Categorical features: ['month', 'weather_code']
+Numerical features (15): ['temperature_2m_max', 'temperature_2m_min', 'temperature_2m_mean', 'apparent_temperature_max', 'apparent_temperature_min']...
+
+Final shape - X_train: (18623, 35), X_val: (6208, 35), X_test: (6208, 35)
+Total features: 35
+
+Numerical features mean (should be ~0): 0.000000
+Numerical features std (should be ~1): 1.000027
+
+Processed data saved to ../../data/processed/:
+  - X_train_exp_1.csv: (18623, 35)
+  - X_val_exp_1.csv: (6208, 35)
+  - X_test_exp_1.csv: (6208, 35)
+  - y_train_exp_1.csv: (18623,)
+  - y_val_exp_1.csv: (6208,)
+  - y_test_exp_1.csv: (6208,)
+
+  Step 1: Optimizing C parameter for AUC...
+Best C parameter: 0.014505
+Best validation AUC: 0.6229
+
+Step 2: Training model with best C and optimizing threshold for f1...
+Best threshold: 0.335
+Best validation f1: 0.6616
+
+Validation Set Performance:
+Accuracy: 0.5068
+Precision: 0.4990
+Recall: 0.9813
+F1-Score: 0.6616
+AUC-ROC: 0.6229
+
+
+Model saved to: ../../models/rain_or_not/rain_or_not_logistic_regression.pkl
+Model info saved to: ../../models/rain_or_not/rain_or_not_logistic_regression_info.json
+Preprocessor saved to: ../../models/rain_or_not/rain_or_not_logistic_regression_preprocessor.pkl
+
+Using threshold: 0.335
+
+============================================================
+CLASSIFICATION REPORT - TEST SET
+============================================================
+              precision    recall  f1-score   support
+
+     No Rain     0.6895    0.0478    0.0894      3158
+        Rain     0.4979    0.9777    0.6598      3050
+
+    accuracy                         0.5047      6208
+   macro avg     0.5937    0.5128    0.3746      6208
+weighted avg     0.5954    0.5047    0.3697      6208
+
+AUC-ROC: 0.6159

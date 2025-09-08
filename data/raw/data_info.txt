@@ -1,0 +1,10 @@
+Sydney Weather Data
+==================
+
+Location: Latitude -33.8678, Longitude 151.2073
+Timezone: Australia/Sydney
+Date Range: 1940-01-02 00:00:00 to 2024-12-31 00:00:00
+Daily Data Shape: (31046, 21)
+
+Daily Columns:
+['time', 'weather_code', 'temperature_2m_max', 'temperature_2m_min', 'temperature_2m_mean', 'apparent_temperature_max', 'apparent_temperature_min', 'apparent_temperature_mean', 'sunrise', 'sunset', 'precipitation_sum', 'rain_sum', 'snowfall_sum', 'precipitation_hours', 'sunshine_duration', 'daylight_duration', 'wind_speed_10m_max', 'wind_gusts_10m_max', 'wind_direction_10m_dominant', 'shortwave_radiation_sum', 'et0_fao_evapotranspiration']
